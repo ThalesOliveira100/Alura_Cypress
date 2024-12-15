@@ -1,5 +1,5 @@
-describe('template spec', () => {
-  it('passes', () => {
+describe('Página de cadastro', () => {
+  it('Preencher os campos do formulário corretamente para cadastrar um novo usuário', () => {
     cy.visit('https://adopet-frontend-cypress.vercel.app/');
     cy.contains('a', "Cadastrar").click();
     cy.get('input[name="nome"]').type("Thales Oliveira");
