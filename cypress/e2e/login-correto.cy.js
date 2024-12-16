@@ -5,9 +5,7 @@ describe('Página de login', () => {
     })
 
     it('Deve preencher os campos do login corretamente e autenticar o usuário na página', () => {
-        cy.get('[data-test="input-loginEmail"]').type('ana@email.com');
-        cy.get('[data-test="input-loginPassword"]').type('Senha123');
-        cy.get('[data-test="submit-button"]').click();
+        cy.login('ana@email.com', 'Senha123')
     });
 });
 
@@ -18,8 +16,6 @@ describe('Login correto fluxo alternativo', () => {
 
     it('Acessa a homepage, clica no botão de ícone de mensagem no header e escreva nome e senha válidos na página de login.', () => {
         cy.get('.header__message').click();
-        cy.get('[data-test="input-loginEmail"]').type('ana@email.com');
-        cy.get('[data-test="input-loginPassword"]').type('Senha123');
-        cy.get('[data-test="submit-button"]').click();
+        cy.login('ana@email.com', 'Senha123')
     });
 });
